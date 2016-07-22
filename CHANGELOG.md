@@ -2,6 +2,40 @@
 
 This file is used to list changes made in each version of the mysql cookbook.
 
+# v8.0.1 (2016-07-20)
+- Fixed a regression in the mysql_client resource where the action was changed from create to install in the 8.0 release
+- Added oracle, opensuse, and opensuseleap as supported platforms in the metadata
+
+# v8.0.0 (2016-07-11)
+
+- Converting from LWRP to custom resources
+- Removing yum-mysql and other dependencies.
+- ^ BREAKING CHANGE: RHELish users are now responsible
+  for including a recipe from the "yum-mysql" or equivalent
+  cookbook before utilizing the mysql_* resources.
+- More thoughtful ChefSpec
+- Renaming "replication" test suite to "smoke"
+- Moving to Inspec
+
+## v7.2.0 (2016-06-30)
+
+- Support openeSUSE leap
+- Support Fedora 24
+
+## v7.1.2 (2016-06-30)
+
+- Avoid deprecation warnings on the upcoming Chef 12.12 release
+
+## v7.1.1 (2016-06-03)
+
+- Fix apparmor blocking writes to non-default tmp_dirs
+- Updated apparmor config to allow read & write to sock.lock file
+- Use cookstyle instead of Rubocop directly
+
+## v7.1.0 (2016-05-11)
+
+- Added support for Ubuntu 16.04
+
 ## v7.0.0 (2016-04-19)
 
 - Removed support for legacy distros: Ubuntu 10.04/13.04/14.10/15.04, Fedora 20/21, OmniOS r151006, opensuse 11.3/12.0
